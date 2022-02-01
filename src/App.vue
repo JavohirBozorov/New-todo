@@ -1,18 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <TodoList />
+
+    <!-- <div>
+      <button @click="showImage = !showImage">Toggle img</button>
+    </div>
+    <transition 
+      enter-active="animate__animated animate__fadeInDown"
+      leave-active="animate__animated animate__fadeOutUp"
+    >
+      <img v-if="showImage" src="@/assets/logo.png">
+    </transition> -->
+
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import TodoList from "./components/ToDoList.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TodoList,
   },
+  data: () => ({
+    // showImage: true,
+  }),
 };
 </script>
 
@@ -23,6 +36,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding-top: 60px;
+  width: 100%;
+  /* background-color: #cae141; */
 }
+/* img {
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce;
+  animation-duration: 2s; 
+} */
 </style>
